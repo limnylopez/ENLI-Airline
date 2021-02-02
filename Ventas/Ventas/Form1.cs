@@ -19,12 +19,12 @@ namespace Ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola mundo");
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Con ayuda de Dios, todo es posible");
         }
     }
 }
