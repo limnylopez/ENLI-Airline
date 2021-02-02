@@ -21,5 +21,10 @@ namespace Ventas
         {
             MessageBox.Show("Hola mundo");
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
