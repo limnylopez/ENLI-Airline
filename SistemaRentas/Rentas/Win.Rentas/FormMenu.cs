@@ -33,5 +33,35 @@ namespace Win.Rentas
         {
             Close();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FormClientes();
+            frm.Show();
+        }
+
+        private void rentarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FormRentar();
+            frm.Show();
+        }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FormRepProductos();
+            frm.Show();
+        }
+
+        private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FormRepClientes();
+            frm.Show();
+        }
+
+        private void reporteDeRentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FormRepRentas();
+            frm.Show();
+        }
     }
 }

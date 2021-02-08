@@ -12,6 +12,9 @@ namespace Win.Rentas
 {
     public partial class FormLogin : Form
     {
+        string usuario = "Limny";
+        string contra = "123";
+
         public FormLogin()
         {
             InitializeComponent();
@@ -19,33 +22,37 @@ namespace Win.Rentas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Bienvenido, usuario de J&J Fashion Store");
-            //var frm = new FormMenu();
-            //frm.Show();
-
-            if ((tbusuario.Text != "" && tbcontra.Text != ""))
+            if ((tbusuario.Text != usuario || tbcontra.Text != contra))
             {
-                if ((tbusuario.Text == "Limny") && (tbcontra.Text == "1234"))
+                if (tbusuario.Text != usuario)
                 {
-                    var frm = new FormMenu();
-                    frm.Show();
+                    MessageBox.Show("Usuario Incorrecto");
+                    tbusuario.Clear();
+                    tbusuario.Focus();
+                    return;
                 }
-               // {
-                  // if ((tbusuario.Text == "Dixee") && (tbcontra.Text == "123"))
-                   // {
-                       // var frm = new FormMenu();
-                      //  frm.Show();
-                  //  }
-
-                   else MessageBox.Show("Acceso denegado");
+                if (tbcontra.Text != contra)
+                {
+                    MessageBox.Show("Contraseña Incorrecta");
+                    tbcontra.Clear();
+                    tbcontra.Focus();
+                    return;
                 }
+            }
+            else
+            {
+                tbusuario.Clear();
+                tbcontra.Clear();
+                MessageBox.Show("Bienvenido, usuario de J&J Fashion Store");
+                FormMenu Form = new FormMenu();
+                Form.ShowDialog();
 
             }
-      //  }
 
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }
