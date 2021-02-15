@@ -1,58 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BL.Rentas;
+using System;
 using System.Windows.Forms;
 
 namespace Win.Rentas
 {
     public partial class FormLogin : Form
     {
-        string usuario = "Limny";
-        string contra = "123";
+        SeguridadBL _seguridad;  //_seguridad es una variable global
 
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((tbusuario.Text != usuario || tbcontra.Text != contra))
+            string usuario;
+            string contrasena;
+
+            usuario = tbusuario.Text;
+            contrasena = tbcontra.Text;
+
+           var resultado= _seguridad.Autorizar(usuario, contrasena);
+
+            if (resultado==true) //Si el resultado es igual a verdadero
+               
             {
-                if (tbusuario.Text != usuario)
-                {
-                    MessageBox.Show("Usuario Incorrecto");
-                    tbusuario.Clear();
-                    tbusuario.Focus();
-                    return;
-                }
-                if (tbcontra.Text != contra)
-                {
-                    MessageBox.Show("Contraseña Incorrecta");
-                    tbcontra.Clear();
-                    tbcontra.Focus();
-                    return;
-                }
+                MessageBox.Show("Bienvenido");
+                FormMenu Form = new FormMenu();
+                Form.ShowDialog();
             }
             else
             {
-                tbusuario.Clear();
-                tbcontra.Clear();
-                MessageBox.Show("Bienvenido, usuario de J&J Fashion Store");
-                FormMenu Form = new FormMenu();
-                Form.ShowDialog();
-
+                MessageBox.Show("Usuario o Contraseña incorrecta");
+                
             }
+          }
 
-        }
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
     }
-}
+        
+    }

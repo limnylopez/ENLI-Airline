@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.rentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeRentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iNTINERARIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarItinerarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rESERVADEVUELOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarVueloProgramadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aYUDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.aVIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarAvionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,9 +55,13 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rentasToolStripMenuItem,
-            this.reportesToolStripMenuItem,
             this.seguridadToolStripMenuItem,
+            this.aVIONToolStripMenuItem,
+            this.reportesToolStripMenuItem,
+            this.iNTINERARIOToolStripMenuItem,
+            this.rESERVADEVUELOToolStripMenuItem,
+            this.uSUARIOSToolStripMenuItem,
+            this.aYUDAToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -60,75 +69,13 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // rentasToolStripMenuItem
-            // 
-            this.rentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productosToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.rentarToolStripMenuItem});
-            this.rentasToolStripMenuItem.Name = "rentasToolStripMenuItem";
-            this.rentasToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
-            this.rentasToolStripMenuItem.Text = "Rentas";
-            // 
-            // productosToolStripMenuItem
-            // 
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.productosToolStripMenuItem.Text = "Productos";
-            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // rentarToolStripMenuItem
-            // 
-            this.rentarToolStripMenuItem.Name = "rentarToolStripMenuItem";
-            this.rentarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.rentarToolStripMenuItem.Text = "Rentar";
-            this.rentarToolStripMenuItem.Click += new System.EventHandler(this.rentarToolStripMenuItem_Click);
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporteDeProductosToolStripMenuItem,
-            this.reporteDeClientesToolStripMenuItem,
-            this.reporteDeRentasToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // reporteDeProductosToolStripMenuItem
-            // 
-            this.reporteDeProductosToolStripMenuItem.Name = "reporteDeProductosToolStripMenuItem";
-            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.reporteDeProductosToolStripMenuItem.Text = "Reporte de Productos";
-            this.reporteDeProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeProductosToolStripMenuItem_Click);
-            // 
-            // reporteDeClientesToolStripMenuItem
-            // 
-            this.reporteDeClientesToolStripMenuItem.Name = "reporteDeClientesToolStripMenuItem";
-            this.reporteDeClientesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.reporteDeClientesToolStripMenuItem.Text = "Reporte de Clientes";
-            this.reporteDeClientesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeClientesToolStripMenuItem_Click);
-            // 
-            // reporteDeRentasToolStripMenuItem
-            // 
-            this.reporteDeRentasToolStripMenuItem.Name = "reporteDeRentasToolStripMenuItem";
-            this.reporteDeRentasToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.reporteDeRentasToolStripMenuItem.Text = "Reporte de Rentas";
-            this.reporteDeRentasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeRentasToolStripMenuItem_Click);
-            // 
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
-            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.seguridadToolStripMenuItem.Text = "INICIAR SESION";
             // 
             // loginToolStripMenuItem
             // 
@@ -137,20 +84,90 @@
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteDeProductosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.reportesToolStripMenuItem.Text = "VUELO";
+            // 
+            // reporteDeProductosToolStripMenuItem
+            // 
+            this.reporteDeProductosToolStripMenuItem.Name = "reporteDeProductosToolStripMenuItem";
+            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.reporteDeProductosToolStripMenuItem.Text = "Registrar vuelo";
+            // 
+            // iNTINERARIOToolStripMenuItem
+            // 
+            this.iNTINERARIOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarItinerarioToolStripMenuItem});
+            this.iNTINERARIOToolStripMenuItem.Name = "iNTINERARIOToolStripMenuItem";
+            this.iNTINERARIOToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.iNTINERARIOToolStripMenuItem.Text = "INTINERARIO";
+            // 
+            // registrarItinerarioToolStripMenuItem
+            // 
+            this.registrarItinerarioToolStripMenuItem.Name = "registrarItinerarioToolStripMenuItem";
+            this.registrarItinerarioToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.registrarItinerarioToolStripMenuItem.Text = "Registrar itinerario";
+            // 
+            // rESERVADEVUELOToolStripMenuItem
+            // 
+            this.rESERVADEVUELOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarVueloProgramadoToolStripMenuItem});
+            this.rESERVADEVUELOToolStripMenuItem.Name = "rESERVADEVUELOToolStripMenuItem";
+            this.rESERVADEVUELOToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.rESERVADEVUELOToolStripMenuItem.Text = "RESERVA DE VUELO";
+            // 
+            // registrarVueloProgramadoToolStripMenuItem
+            // 
+            this.registrarVueloProgramadoToolStripMenuItem.Name = "registrarVueloProgramadoToolStripMenuItem";
+            this.registrarVueloProgramadoToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
+            this.registrarVueloProgramadoToolStripMenuItem.Text = "Registrar vuelo programado";
+            // 
+            // uSUARIOSToolStripMenuItem
+            // 
+            this.uSUARIOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarUsuarioToolStripMenuItem});
+            this.uSUARIOSToolStripMenuItem.Name = "uSUARIOSToolStripMenuItem";
+            this.uSUARIOSToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.uSUARIOSToolStripMenuItem.Text = "USUARIOS";
+            // 
+            // registrarUsuarioToolStripMenuItem
+            // 
+            this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.registrarUsuarioToolStripMenuItem.Text = "Registrar usuario";
+            // 
+            // aYUDAToolStripMenuItem
+            // 
+            this.aYUDAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaDelSistemaToolStripMenuItem});
+            this.aYUDAToolStripMenuItem.Name = "aYUDAToolStripMenuItem";
+            this.aYUDAToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.aYUDAToolStripMenuItem.Text = "AYUDA";
+            // 
+            // acercaDelSistemaToolStripMenuItem
+            // 
+            this.acercaDelSistemaToolStripMenuItem.Name = "acercaDelSistemaToolStripMenuItem";
+            this.acercaDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.acercaDelSistemaToolStripMenuItem.Text = "Acerca del sistema";
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.salirToolStripMenuItem.Text = "SALIR";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Win.Rentas.Properties.Resources._1;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(428, 196);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(335, 287);
+            this.pictureBox1.Size = new System.Drawing.Size(456, 287);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -163,6 +180,21 @@
             this.label3.Size = new System.Drawing.Size(251, 32);
             this.label3.TabIndex = 8;
             this.label3.Text = "MENÚ PRINCIPAL";
+            // 
+            // aVIONToolStripMenuItem
+            // 
+            this.aVIONToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarAvionToolStripMenuItem});
+            this.aVIONToolStripMenuItem.Name = "aVIONToolStripMenuItem";
+            this.aVIONToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.aVIONToolStripMenuItem.Text = "AVION";
+            // 
+            // registrarAvionToolStripMenuItem
+            // 
+            this.registrarAvionToolStripMenuItem.Name = "registrarAvionToolStripMenuItem";
+            this.registrarAvionToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.registrarAvionToolStripMenuItem.Text = "Registrar Avion";
+            this.registrarAvionToolStripMenuItem.Click += new System.EventHandler(this.registrarAvionToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -189,18 +221,22 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem rentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rentarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeRentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iNTINERARIOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rESERVADEVUELOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aYUDAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uSUARIOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarVueloProgramadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDelSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarItinerarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aVIONToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarAvionToolStripMenuItem;
     }
 }

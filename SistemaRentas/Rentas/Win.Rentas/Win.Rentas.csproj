@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormClientes.Designer.cs">
-      <DependentUpon>FormClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,46 +61,19 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductos.Designer.cs">
-      <DependentUpon>FormProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRentar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRentar.Designer.cs">
-      <DependentUpon>FormRentar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRepClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRepClientes.Designer.cs">
-      <DependentUpon>FormRepClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRepProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRepProductos.Designer.cs">
-      <DependentUpon>FormRepProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRepRentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRepRentas.Designer.cs">
-      <DependentUpon>FormRepRentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarVuelo.Designer.cs">
+      <DependentUpon>RegistrarVuelo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductos.resx">
-      <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +85,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrarVuelo.resx">
+      <DependentUpon>RegistrarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BL.Rentas.RegistrarVuelo.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.RegistrarVueloBL.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Rentas\BL.Rentas.csproj">
+      <Project>{cedb408c-04c3-470f-9dfc-cb822726690f}</Project>
+      <Name>BL.Rentas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

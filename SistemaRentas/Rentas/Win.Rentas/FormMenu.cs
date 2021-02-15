@@ -23,44 +23,23 @@ namespace Win.Rentas
             frm.Show();
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new FormProductos();
-            frm.Show();
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FormClientes();
-            frm.Show();
+
         }
 
-        private void rentarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FormRentar();
-            frm.Show();
+
         }
 
-        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registrarAvionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FormRepProductos();
-            frm.Show();
-        }
-
-        private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new FormRepClientes();
-            frm.Show();
-        }
-
-        private void reporteDeRentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new FormRepRentas();
+            var frm = new RegistrarVuelo();
             frm.Show();
         }
     }
