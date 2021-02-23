@@ -18,6 +18,7 @@ namespace Practicas
         }
 
         private void FormClientes_Load(object sender, EventArgs e)
+
         {
 
         }
