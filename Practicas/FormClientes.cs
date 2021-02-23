@@ -16,5 +16,10 @@ namespace Practicas
         {
             InitializeComponent();
         }
+
+        private void FormClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
