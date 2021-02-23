@@ -69,6 +69,7 @@
     <Compile Include="RegistrarVuelo.Designer.cs">
       <DependentUpon>RegistrarVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="toolStripButtonCancelar.cs" />
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

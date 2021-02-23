@@ -27,17 +27,8 @@ namespace Win.Rentas
         {
             Close();
         }
-        private void rentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void registrarAvionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registrarVueloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new RegistrarVuelo();
             frm.Show();
