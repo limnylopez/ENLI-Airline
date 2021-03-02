@@ -36,11 +36,9 @@ namespace BL.Practicas
             {
                 return resultado;
             }
-                
-            if(producto.Id == 0)
-            {
-                producto.Id = ListaProductos.Max(item => item.Id) + 1; // Max busca en la lista producto el item id para el ultimo de la lista y sumarle 1, dando asi un nuevo item
-            }
+
+            _contexto.SaveChanges(); //guarda los cambios en el formulario productos en la base de datos 
+
             resultado.Exitoso = true;
             return resultado;
         }
@@ -59,6 +57,7 @@ namespace BL.Practicas
                 if(producto.Id == id) // De ser verdadero
                 {
                     ListaProductos.Remove(producto); // Elimina el item
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -106,6 +105,6 @@ namespace BL.Practicas
     {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
-
+           
     }
 }

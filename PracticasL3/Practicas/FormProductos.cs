@@ -51,6 +51,7 @@ namespace Practicas
             {
                 listaProductosBindingSource.ResetBindings(false); //Resetea lo que vemos en pantalla porque hubo un cambio
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Producto guardado");
             }
             else
             {

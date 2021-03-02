@@ -15,7 +15,7 @@ namespace BL.Practicas
                 return true;
             }
             else
-            { 
+            {
                 if (usuario == "user" && contrasena == "456")
                 {
                     return true;
