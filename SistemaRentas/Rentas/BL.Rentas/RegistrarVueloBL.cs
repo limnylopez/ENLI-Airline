@@ -4,48 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Data.Entity;
 
 namespace BL.Rentas
 {
     public class RegistrarVueloBL
     {
+        Contexto _contexto;
+
         public BindingList<RegistrarVuelo> ListaRegistroVuelo { get; set; } //Propiedad con acceso publico
 
         public RegistrarVueloBL() //ctor y doble tap , constructor 
         {
+            _contexto = new Contexto();
             ListaRegistroVuelo = new BindingList<RegistrarVuelo>();
-
-            var vuelo1 = new RegistrarVuelo();
-            vuelo1.idvuelo = 1;
-            vuelo1.idclase = "Económica";
-            vuelo1.horasvuelo = 14;
-            vuelo1.ciudaddestino = "Houston, Texas U.S.A" ;
-            vuelo1.ciudadorigen = "San Pedro Sula, HN";
-            vuelo1.activo = true;
-
-            ListaRegistroVuelo.Add(vuelo1);
-
-
-            var vuelo2 = new RegistrarVuelo();
-            vuelo2.idvuelo = 2;
-            vuelo2.idclase = "V.I.P";
-            vuelo2.horasvuelo = 20;
-            vuelo2.ciudaddestino = "Florida, U.S.A";
-            vuelo2.ciudadorigen = "Tegucigalpa, HN";
-            vuelo2.activo = true;
-
-            ListaRegistroVuelo.Add(vuelo2);
-
-
-            var vuelo3 = new RegistrarVuelo();
-            vuelo3.idvuelo = 3;
-            vuelo3.idclase = "Media";
-            vuelo3.horasvuelo = 10;
-            vuelo3.ciudaddestino = "San Salvador, El Salvador";
-            vuelo3.ciudadorigen = "Tegucigalpa, HN";
-            vuelo3.activo = true;
-
-            ListaRegistroVuelo.Add(vuelo3);
 
         }
 
@@ -56,6 +28,10 @@ namespace BL.Rentas
 
         public BindingList<RegistrarVuelo> ObtenerRegistroVuelo()
         {
+            _contexto.RegistrarVuelo.Load();
+            ListaRegistroVuelo = _contexto.RegistrarVuelo.Local.ToBindingList();
+
+
             return ListaRegistroVuelo;
         }
 
