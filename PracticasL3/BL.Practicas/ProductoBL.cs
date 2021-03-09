@@ -75,7 +75,7 @@ namespace BL.Practicas
                 resultado.Exitoso = false; 
             }
 
-            if (producto.Existencia < 0) 
+            if (producto.Existencia < 0)
             {
                 resultado.Mensaje = "La existencia debe ser mayor que cero";
                 resultado.Exitoso = false;
@@ -87,6 +87,19 @@ namespace BL.Practicas
                 resultado.Exitoso = false;
             }
 
+            if (producto.Tipoid == 0)
+            {
+                resultado.Mensaje = "Seleccione un Tipo";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = "Seleccione una categoria";
+                resultado.Exitoso = false;
+            }
+
+
             return resultado;
         }
     }
@@ -97,6 +110,11 @@ namespace BL.Practicas
         public String Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
+        public int CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+        public int Tipoid { get; set; }
+        public Tipo Tipo { get; set; }
+        public byte[] foto { get; set; }
         public bool Activo { get; set; }
     }
 
@@ -105,6 +123,6 @@ namespace BL.Practicas
     {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
-           
+
     }
 }
