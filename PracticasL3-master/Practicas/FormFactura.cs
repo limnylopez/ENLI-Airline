@@ -186,6 +186,11 @@ namespace Practicas
                 label1.Visible = false;
             }
         }
+
+        private void impuestoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

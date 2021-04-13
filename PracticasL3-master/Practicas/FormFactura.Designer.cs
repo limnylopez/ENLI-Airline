@@ -333,6 +333,7 @@
             this.impuestoTextBox.Size = new System.Drawing.Size(200, 20);
             this.impuestoTextBox.TabIndex = 10;
             this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.impuestoTextBox.TextChanged += new System.EventHandler(this.impuestoTextBox_TextChanged);
             // 
             // subtotalTextBox
             // 
